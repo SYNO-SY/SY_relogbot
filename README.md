@@ -15,7 +15,7 @@
 - You Can Find Many Options in Config.lua
 ```sh
 cd resources/
-git clone https://https://github.com/SYNOGIM/Relogbot
+git clone https://github.com/SYNOGIM/Relogbot
 ```
 #### Manualy
 
