@@ -128,7 +128,7 @@ Citizen.CreateThread(function()
     if Config.EnableBlips then
         for k,v in pairs(Config.AKbot) do
             local blip = AddBlipForCoord(v.x, v.y, v.z)
-            SetBlipSprite (blip, Config.Sprite)                    --https://docs.fivem.net/docs/game-references/blips/
+            SetBlipSprite (blip, Config.Sprite)                    
             SetBlipDisplay(blip, 2)
             SetBlipScale  (blip, Config.Scale)
             SetBlipColour (blip, Config.color)
