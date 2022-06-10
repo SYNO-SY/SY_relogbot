@@ -19,11 +19,11 @@ renzu_popui > https://github.com/renzuzu/renzu_popui (optional)
 You Can Find Many Options in Config.lua
 ```sh
 cd resources/
-git clone https://github.com/SYNOGIM/syno_announcement
+git clone https://https://github.com/SYNOGIM/Relogbot
 ```
 #### Manualy
 
-- Download <https://github.com/SYNOGIM/Relogbot)>
+- Download <https://github.com/SYNOGIM/Relogbot>
 - Put it in the `resource` repository
 
 ### Instalation
