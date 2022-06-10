@@ -17,6 +17,21 @@ renzu_popui > https://github.com/renzuzu/renzu_popui (optional)
 
 *Easy To Config*
 You Can Find Many Options in Config.lua
+```sh
+cd resources/
+git clone https://github.com/SYNOGIM/syno_announcement
+```
+#### Manualy
+
+- Download <https://github.com/SYNOGIM/Relogbot)>
+- Put it in the `resource` repository
+
+### Instalation
+
+- Add `ensure SY_relogbot` to your `server.cfg`.
+
+### DISCORD :
+𝐒 𝐘 𝐍 𝐎#1760
 
 
 
