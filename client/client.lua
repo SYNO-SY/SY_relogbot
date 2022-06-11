@@ -55,16 +55,14 @@ Citizen.CreateThread(function()
                                         exports['okokNotify']:Alert("RELOG", "You Dont Have Enough Money!", 6000, 'error')
                                     end
                                 end)
-                            end------
-                        end
-                    else
+                         end
+                       else
                         TriggerEvent('renzu_popui:closeui')    
                     end
                 end
             end
-        end
         Citizen.Wait(sleep)
-    end
+       end
 end)
 --Ped--
 Citizen.CreateThread(function()
