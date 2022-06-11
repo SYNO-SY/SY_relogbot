@@ -17,7 +17,6 @@ Citizen.CreateThread(function()
             local userDst = GetDistanceBetweenCoords(pedCoords, loc.x, loc.y, loc.z, true)
             if userDst <= 5 then
                 sleep = 2
-                if userDst <= 2 then
                     if userDst <= 1.0 then
                         if Config.DrawText then 
                             DrawText3D(loc.x, loc.y, loc.z, 'Press[E] For Check in/Heal $'.. Config.Price)
@@ -32,7 +31,6 @@ Citizen.CreateThread(function()
                         TriggerEvent('renzu_popui:drawtextuiwithinput',table)
                         end
                         if IsControlJustPressed(0, 38) then
-
                             if Config.AkPunda then 
                                     ESX.TriggerServerCallback('SYDEV:akpunda', function(hasEnoughMoney)
                                         if hasEnoughMoney then
@@ -56,27 +54,6 @@ Citizen.CreateThread(function()
                                             end
                                         end
                                     end)
-                            else
-                                ESX.TriggerServerCallback('SYDEV:akpunda', function(hasEnoughMoney)
-                                    if hasEnoughMoney then
-                                        if Config.UseRprogress then
-                                            exports.rprogress:Custom({
-                                                Duration = 1000,
-                                                Label = "relogging.....",
-                                                DisableControls = {
-                                                    Mouse = false,
-                                                    Player = true,
-                                                    Vehicle = true
-                                                }
-                                            })
-                                            Citizen.Wait(1000)
-                                        TriggerServerEvent('esx_multicharacter:relog')
-                                        TriggerServerEvent('SYDEV:money')
-                                        else
-                                            TriggerServerEvent('esx_multicharacter:relog')
-                                            TriggerServerEvent('SYDEV:money')
-                                        end
-
                                     else
                                         exports['okokNotify']:Alert("RELOG", "You Dont Have Enough Money!", 6000, 'error')
                                     end
