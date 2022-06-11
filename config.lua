@@ -4,7 +4,6 @@ Config = {}
 ------------------------------------------------------------------------------------------------------ 
 Config.EnableBlips = true        --enables blip in the map
 Config.EnablePeds = true         --enables poeds
-Config.AkPunda = true            --always make true unless you know what you are doing!!
 Config.UseRprogress = true       --if true you need Rprogressbar
 Config.Price = 5000              --Price for relog
 Config.ped = "cs_bankman"        --ped models  link : https://wiki.rage.mp/index.php?title=Peds
