@@ -7,7 +7,7 @@ RegisterServerEvent('SYDEV:money')
 AddEventHandler('SYDEV:money', function()
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
-    xPlayer.removeAccountMoney('bank', Config.Price)
+    xPlayer.removeAccountMoney(Config.moneytype, Config.Price)
     TriggerClientEvent('okokNotify:Alert', source, 'RELOG', '$'.. Config.Price ..' Money Detucted', 5000, 'success')
 
 end)
