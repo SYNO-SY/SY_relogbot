@@ -4,11 +4,11 @@ Config = {}
 ------------------------------------------------------------------------------------------------------ 
 Config.EnableBlips = true        --enables blip in the map
 Config.EnablePeds = true         --enables poeds
-Config.UseRprogress = true       --if true you need Rprogressbar
+Config.UseRprogress = false      --if true you need Rprogressbar
 Config.Price = 5000              --Price for relog
 Config.ped = "cs_bankman"        --ped models  link : https://wiki.rage.mp/index.php?title=Peds
 Config.pedhash = 0x9760192E      --ped hash
-Config.DrawText = false          --If false you need renzu_popui
+Config.DrawText = true           --If false you need renzu_popui
 --BLIPS--
 Config.Sprite = 84               --https://docs.fivem.net/docs/game-references/blips/
 Config.Scale = 0.6
