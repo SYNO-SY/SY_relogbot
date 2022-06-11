@@ -5,6 +5,7 @@ Config = {}
 Config.EnableBlips = true        --enables blip in the map
 Config.EnablePeds = true         --enables poeds
 Config.UseRprogress = false      --if true you need Rprogressbar
+Config.moneytype = 'bank'        --cash type 'money','bank',black_money'
 Config.Price = 5000              --Price for relog
 Config.ped = "cs_bankman"        --ped models  link : https://wiki.rage.mp/index.php?title=Peds
 Config.pedhash = 0x9760192E      --ped hash
