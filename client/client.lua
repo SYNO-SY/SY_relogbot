@@ -31,7 +31,6 @@ Citizen.CreateThread(function()
                         TriggerEvent('renzu_popui:drawtextuiwithinput',table)
                         end
                         if IsControlJustPressed(0, 38) then
-                            if Config.AkPunda then 
                                     ESX.TriggerServerCallback('SYDEV:akpunda', function(hasEnoughMoney)
                                         if hasEnoughMoney then
                                             if Config.UseRprogress then
@@ -52,13 +51,11 @@ Citizen.CreateThread(function()
                                                 TriggerServerEvent('esx_multicharacter:relog')
                                                 TriggerServerEvent('SYDEV:money')  
                                             end
-                                        end
-                                    end)
-                                    else
+                                       else
                                         exports['okokNotify']:Alert("RELOG", "You Dont Have Enough Money!", 6000, 'error')
                                     end
                                 end)
-                            end
+                            end------
                         end
                     else
                         TriggerEvent('renzu_popui:closeui')    
