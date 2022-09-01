@@ -15,6 +15,6 @@ Config.Sprite = 84               --https://docs.fivem.net/docs/game-references/b
 Config.Scale = 0.6
 Config.color = 2                 --https://docs.fivem.net/docs/game-references/blips/#blip-colors
 Config.AKbot = {
-    {x = -2031.21, y = -464.87, z = 11.6, heading = 229.14, type = 'legal'}
-   -- {x = , y = , z = , heading = , type = 'legal'}                        --Add more bot locations here
+    {x = -2031.21, y = -464.87, z = 11.6, heading = 229.14}
+   -- {x = , y = , z = , heading = xx}                        --Add more bot locations here
 }
