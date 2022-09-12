@@ -31,32 +31,9 @@ Citizen.CreateThread(function()
                         TriggerEvent('renzu_popui:drawtextuiwithinput',table)
                         end
                         if IsControlJustPressed(0, 38) then
-                                    ESX.TriggerServerCallback('SYDEV:akpunda', function(hasEnoughMoney)
-                                        if hasEnoughMoney then
-                                            if Config.UseRprogress then
-                                            exports.rprogress:Custom({
-                                                Duration = 10,
-                                                Label = "relogging.....",
-                                                DisableControls = {
-                                                    Mouse = false,
-                                                    Player = true,
-                                                    Vehicle = true
-                                                }
-                                            })
-                                            Citizen.Wait(10)
-                                            TriggerServerEvent('esx_multicharacter:relog')
-                                            TriggerServerEvent('SYDEV:money')
-                                            TriggerEvent('renzu_popui:closeui')
-                                            else
-                                                TriggerServerEvent('esx_multicharacter:relog')
-                                                TriggerServerEvent('SYDEV:money')  
-                                            end
-                                       else
-                                        exports['okokNotify']:Alert("RELOG", "You Dont Have Enough Money!", 6000, 'error')
-                                    end
-                                end)
-                         end
-                       else
+                            TriggerEvent('SY_relog:event')
+                        end
+                    else
                         TriggerEvent('renzu_popui:closeui')    
                     end
                 end
@@ -64,6 +41,34 @@ Citizen.CreateThread(function()
         Citizen.Wait(sleep)
        end
 end)
+--EVNETS
+RegisterNetEvent('SY_relog:event')
+AddEventHandler('SY_relog:event', function()
+    ESX.TriggerServerCallback('SYDEV:akpunda', function(hasEnoughMoney)
+        if hasEnoughMoney then
+            if Config.UseRprogress then
+                exports.rprogress:Custom({
+                    Duration = Config.Duration,
+                    Label = "relogging.....",
+                    DisableControls = {
+                        Mouse = false,
+                        Player = true,
+                        Vehicle = true
+                    }
+                })
+            Citizen.Wait(Config.Duration)
+            TriggerServerEvent('esx_multicharacter:relog')
+            TriggerServerEvent('SYDEV:money')
+            TriggerEvent('renzu_popui:closeui')
+            else
+                TriggerServerEvent('esx_multicharacter:relog')
+                TriggerServerEvent('SYDEV:money')  
+            end
+        else
+            exports['okokNotify']:Alert("RELOG", "You Dont Have Enough Money!", 6000, 'error')
+        end
+    end)	
+end
 --Ped--
 Citizen.CreateThread(function()
     RequestModel(GetHashKey(Config.ped))
